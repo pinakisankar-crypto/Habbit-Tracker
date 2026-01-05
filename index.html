@@ -11,25 +11,92 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- javascript main file  -->
+    <script src="https://cdn.jsdelivr.net/npm/js-circle-progress/dist/circle-progress.min.js" type="module"></script>
+
     <script defer src="javascript/app.js"></script>
 </head>
 
 <body>
     <header>
-        <div id="left" >
+        <div id="left">
             <div>
                 <i id="logo" class="fa-solid fa-leaf"></i>
             </div>
             <div>
-                <h2>Smart Habit Tracker</h2>
-                <p>Tagline</p>
+                <h2>Habit<span>Pro</span></h2>
+                <p>Empowering Daily Excellence</p>
             </div>
         </div>
-        <div id="right" >
+        <div id="right">
             <p>Monday, January 5, 2026</p>
             <span> <i class="fa-solid fa-wifi"></i> Online</span>
         </div>
     </header>
+
+    <main>
+        <section id="left">
+            <div class="header">
+                <div>
+                    <h2>Your Habits</h2>
+                    <p>Consistency is the key to excellence. Track your progress below.</p>
+                </div>
+                <div>
+                    <p id="addHabitBtn">
+                        <i class="fa-solid fa-plus"></i>
+                    </p>
+                </div>
+            </div>
+
+            <div class="habits">
+                <!-- <div id="habit-box">
+                    <div>
+                        <div id="habit-icon"></div>
+                        <p id="habit-name">Morning walk</p>
+                    </div>
+                    <div>
+                        <p id="del-habit"><i class="fa-solid fa-trash"></i></p>
+                        <div id="checkMark"></div>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+        <section id="right">
+            <div class="header">
+                <h4> <i class="fa-solid fa-chart-pie"></i> Overview</h4>
+            </div>
+            <div class="progress">
+
+                <circle-progress max="100" value="0" text-format="percent"></circle-progress>
+            </div>
+            <div class="track">
+                <div>
+                    <h5>Completed</h5>
+                    <p id="completedNum">0</p>
+                </div>
+                <div>
+                    <h5>Pending</h5>
+                    <p id="pendingNum">0</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2026 HabitPro. All rights reserved.</p>
+            </div>
+            <div class="footer-center">
+                <p>Empowering Daily Excellence</p>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

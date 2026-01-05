@@ -7,8 +7,9 @@
 :root{
     --background-color: #f9f9f9;
     --primary-color: #0a1a3c;
+    --light-primary-color: #f4effa;
     --success-color:#198038;
-    --light-success-color:#9ef01a;
+    --light-success-color:#d8f3dc;
     --error-color:#da1e28;
     --text-color:#1a1a1a;
 }
@@ -18,6 +19,8 @@ body{
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
 }
 
 header{
@@ -41,7 +44,7 @@ header #right{
     align-items: center;
 }
 
-header span{
+header #right span{
     background-color: var(--light-success-color);
     padding: 0.3rem 1.2rem;
     border-radius: 10px;
@@ -58,3 +61,192 @@ header #logo{
 }
 
 
+main{
+    display: flex;
+    width: 100%;
+    flex: 1;
+}
+
+main #left{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-color: #f4f3f3;
+}
+
+main #left .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    width: 100%;
+    left: 0px;
+    padding: 1.8rem 2rem;
+}
+
+main #left .header h2{
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+}
+
+main #addHabitBtn{
+    background-color: var(--primary-color);
+    padding: 0.8rem;
+    border-radius: 5px;
+    color: var(--background-color);
+}
+
+main .habits{
+    margin-top: 1rem;
+    overflow-y: auto;
+    height: 76%;
+}
+
+main #habit-box{
+    border: 2px solid #d2d2d2;
+    width: 90%;
+    margin: 10px auto;
+    padding: 0.7rem;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main #habit-box > div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+main #habit-icon, main #checkMark{
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1.5px solid #d2d2d2;
+    border-radius: 5px;
+}
+
+main #del-habit{
+    color: red;
+}
+
+main #habit-name{
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+main #checkMark{
+    border-radius: 8px;
+    border: 2px solid #d2d2d2;
+}
+
+main #right{
+    width: 50%;
+    height: 100%;
+    padding: 2rem 1rem;
+}
+
+main #right h4{
+    font-size: 1.3rem;
+    color: darkgray;
+}
+
+main #right .progress{
+    display: flex;
+    justify-content: center;
+}
+
+circle-progress::part(base){
+    width: 20rem;
+    height: 20rem;
+}
+
+circle-progress::part(text){
+    color: var(--primary-color);
+}
+
+circle-progress::part(value) {
+	stroke-width: 6px;
+	stroke: hsl(280, 90%, 50%);
+	stroke-linecap: round;
+}
+circle-progress::part(circle) {
+	stroke-width: 2px;
+}
+
+main #right .track{
+    display: flex;
+    gap: 2rem;
+    width: 70%;
+    margin: 0px auto;
+    margin-top: 5rem;
+}
+
+main #right .track > div{
+    width: 100%;
+    height: 6rem;
+    border: 2px solid #d2d2d2;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+main .track > div:first-child{
+    background-color: var(--light-success-color);
+}
+
+main .track > div:last-child{
+    background-color: var(--light-primary-color);
+}
+
+main .track > div p{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+main #right .track h5{
+    font-size: 0.9rem;
+}
+
+footer{
+    padding: 1rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #f4f3f3;
+    border-top: 1px solid #d2d2d2;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.social-link {
+    color: #f4f3f3;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: var(--light-success-color);
+}
