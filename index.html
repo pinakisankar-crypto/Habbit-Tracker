@@ -13,7 +13,7 @@
     <!-- javascript main file  -->
     <script src="https://cdn.jsdelivr.net/npm/js-circle-progress/dist/circle-progress.min.js" type="module"></script>
 
-    <script defer src="javascript/app.js"></script>
+    <script type="module" defer src="javascript/app.js"></script>
 </head>
 
 <body>
@@ -48,16 +48,6 @@
             </div>
 
             <div class="habits">
-                <!-- <div id="habit-box">
-                    <div>
-                        <div id="habit-icon"></div>
-                        <p id="habit-name">Morning walk</p>
-                    </div>
-                    <div>
-                        <p id="del-habit"><i class="fa-solid fa-trash"></i></p>
-                        <div id="checkMark"></div>
-                    </div>
-                </div> -->
 
             </div>
         </section>
@@ -82,6 +72,38 @@
         </section>
     </main>
 
+    <div class="addHabitBox" >
+        <div class="header" >
+            <div>
+                <h3>New Habit</h3>
+                <p>DEFINE YOUR GOAL</p>
+            </div>
+            <div>
+                <i id="close-form" class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <form id="habitForm">
+            <label for="habit">Habit Name</label><br>
+            <input type="text" class="habit-text" placeholder="e.g. Read 30 mins">
+            <p>Quick Suggestions</p>
+            <div class="suggestions" >
+                <span>Cycling</span>
+                <span>Code review</span>
+                <span>reading</span>
+            </div>
+            <div class="buttons" >
+                <button type="button">Cancel</button>
+                <button type="submit">+ Create Habit</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="opaque-box" >
+
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-left">
@@ -97,6 +119,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>

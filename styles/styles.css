@@ -102,7 +102,7 @@ main .habits{
     height: 76%;
 }
 
-main #habit-box{
+main .habit-box{
     border: 2px solid #d2d2d2;
     width: 90%;
     margin: 10px auto;
@@ -114,33 +114,51 @@ main #habit-box{
     justify-content: space-between;
 }
 
-main #habit-box > div{
+main .habit-box > div{
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-main #habit-icon, main #checkMark{
+main #habit-icon, main .checkMark{
     width: 3.5rem;
     height: 3.5rem;
     border: 1.5px solid #d2d2d2;
     border-radius: 5px;
 }
 
-main #del-habit{
+main .del-habit{
     color: red;
 }
 
-main #habit-name{
+main .habit-text{
     font-weight: 600;
     font-size: 1.3rem;
     color: var(--primary-color);
 }
 
-main #checkMark{
+.habit-box.completed .habit-text {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+main .checkMark{
     border-radius: 8px;
     border: 2px solid #d2d2d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
+
+main .checkMark.checked{
+    border-color: var(--success-color);
+}
+
+main .checkMark.checked i {
+    color: var(--success-color);
+}
+
 
 main #right{
     width: 50%;
@@ -207,6 +225,126 @@ main .track > div p{
 
 main #right .track h5{
     font-size: 0.9rem;
+}
+
+.addHabitBox{
+    width: 28rem;
+    height: 22rem;
+    color: #66666e;
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    position: fixed;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) scale(1.1);
+    z-index: 20;
+    display: none;
+}
+
+.addHabitBox .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.addHabitBox .header h3{
+    font-size: 1.7rem;
+    color: var(--primary-color);
+}
+
+.addHabitBox .header p{
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.addHabitBox form{
+    width: 100%;
+    margin-top: 1.3rem;
+}
+
+.addHabitBox form label{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.addHabitBox form input{
+    width: 100%;
+    padding: 1rem 0.6rem;
+    border: none;
+    margin: 0.5rem 0rem;
+    background-color: #f4f3f3;
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+}
+
+.addHabitBox form p{
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0.7rem 0rem;
+}
+
+.addHabitBox .suggestions{
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.addHabitBox .suggestions span{
+    background-color: var(--light-primary-color);
+    color: var(--primary-color);
+    padding: 0.2rem 1.2rem;
+    font-size: 0.9rem;
+    border: 1px solid #d2d2d2;
+    border-radius: 6px;
+    text-transform: capitalize;
+}
+
+.addHabitBox .buttons{
+    position: absolute;
+    bottom: 1.7rem;
+    width: 100%;
+    left: 0px;
+    padding: 0rem 1rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: right;
+}
+
+.addHabitBox .buttons button{
+    border: none;
+    background-color: transparent;
+    padding: 0.6rem 1.5rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.addHabitBox .buttons button:first-child{
+    border: 1px solid #d2d2d2;
+}
+
+.addHabitBox .buttons button:first-child:hover{
+    background-color: var(--error-color);
+    color: var(--background-color);
+}
+
+.addHabitBox .buttons button:last-child{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.opaque-box{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    display: none;
+    opacity: 70%;
 }
 
 footer{
