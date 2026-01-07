@@ -388,3 +388,134 @@ footer{
 .social-link:hover {
     color: var(--light-success-color);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    main #left, main #right {
+        width: 100%;
+        height: auto;
+    }
+
+    main #left .habits{
+        height: fit-content;
+    }
+
+    main #left .header {
+        padding: 1rem;
+    }
+
+    main #left .header h2 {
+        font-size: 2rem;
+    }
+
+    main .habits {
+        height: 60vh;
+        margin-bottom: 1rem;
+    }
+
+    main #right {
+        padding: 1rem;
+    }
+
+    circle-progress::part(base) {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    main #right .track {
+        gap: 1rem;
+        width: 90%;
+        margin-top: 2rem;
+    }
+
+    main #right .track > div {
+        height: 4rem;
+    }
+
+    main #right .track > div p {
+        font-size: 2rem;
+    }
+
+    .addHabitBox {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .addHabitBox .header h3 {
+        font-size: 1.5rem;
+    }
+
+    .addHabitBox form input {
+        padding: 0.8rem 0.5rem;
+    }
+
+    .addHabitBox .suggestions {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .addHabitBox .buttons {
+        position: static;
+        margin-top: 1rem;
+        justify-content: space-between;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: center;
+    }
+
+    .footer-right {
+        justify-content: center;
+    }
+}
+
+@media (max-width:670px){
+    header #right p{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    main #left .header h2 {
+        font-size: 1.8rem;
+    }
+
+    circle-progress::part(base) {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    main #right .track {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    main #right .track > div {
+        height: 3rem;
+    }
+
+    main #right .track > div p {
+        font-size: 1.5rem;
+    }
+
+    .addHabitBox {
+        width: 95%;
+    }
+
+    .addHabitBox .suggestions span {
+        padding: 0.2rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}

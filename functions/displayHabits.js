@@ -16,7 +16,7 @@ export const displayHabits = (habits) => {
             </div>
             <div>
                 <i class="del-habit fa-solid fa-trash"></i>
-                <div class="checkMark">
+                <div class="checkMark ${habit.completed ? 'checked' : ''}">
                 <i class="fa-solid fa-check"></i>
                 </div>
             </div>
@@ -43,6 +43,8 @@ const updateProgress = (habits) => {
 
 habitsBox.addEventListener('click', async (e) => {
     if (e.target.closest('.checkMark')) {
+        const checkMark = e.target.closest('.checkMark');
+        checkMark.classList.toggle('checked');
         const card = e.target.closest('.habit-box');
         const id = parseInt(card.dataset.id, 10);
         const currentCompleted = card.classList.contains('completed');
