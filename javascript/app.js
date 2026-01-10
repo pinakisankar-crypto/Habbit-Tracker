@@ -12,7 +12,7 @@ const status = document.querySelector(".status");
 
 (function () {
   loadHabits();
-  loadDate()
+  loadDate();
 })();
 
 let isOffline = false;
@@ -65,7 +65,16 @@ habitForm.addEventListener("submit", async (event) => {
       loadHabits();
       addHabbitBox.style.display = "none";
       backgroundOpaque.style.display = "none";
-      alert("Habit Created Locally!");
+      Toastify({
+        text: "Habit created!!!",
+        duration: 3000,
+        close: true,
+        position: "center",
+        stopOnFocus: true,
+        style: {
+          background: "#198038",
+        },
+      }).showToast()
     };
   } catch (err) {
     console.error("Failed to save habit:", err);
